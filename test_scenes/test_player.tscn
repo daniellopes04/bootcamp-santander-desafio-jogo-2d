@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://xmfh8pyflxkv"]
+[gd_scene load_steps=5 format=3 uid="uid://xmfh8pyflxkv"]
 
 [ext_resource type="Texture2D" uid="uid://br7w2872erqj8" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_wkauo"]
+[ext_resource type="PackedScene" uid="uid://busxacp6n0o3t" path="res://player/player.tscn" id="2_250bf"]
+[ext_resource type="PackedScene" uid="uid://c0sccog5jfj4d" path="res://enemies/pawn.tscn" id="3_lucu3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uherv"]
 line_spacing = 11.0
@@ -93,6 +95,18 @@ text = "0 1 2 3 4 5 6 7 "
 label_settings = SubResource("LabelSettings_uherv")
 autowrap_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-675, -859)
-texture = ExtResource("1_wkauo")
+[node name="Player" parent="." instance=ExtResource("2_250bf")]
+position = Vector2(348, 362)
+motion_mode = 1
+
+[node name="Pawn" parent="." instance=ExtResource("3_lucu3")]
+position = Vector2(226, 493)
+
+[node name="Pawn2" parent="." instance=ExtResource("3_lucu3")]
+position = Vector2(154, 283)
+
+[node name="Pawn3" parent="." instance=ExtResource("3_lucu3")]
+position = Vector2(906, 375)
+
+[node name="Pawn4" parent="." instance=ExtResource("3_lucu3")]
+position = Vector2(545, 553)
